@@ -17,5 +17,7 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
         # bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: ruby --version # explicitly show the ruby version
+    - run: brew update 
+    - run: brew install gobject-introspection
     - run: bundle install
     - run: bundle exec ruby src.rb
